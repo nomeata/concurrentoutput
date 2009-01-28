@@ -54,5 +54,5 @@ source-repository head
 
 source-repository this
   type:     darcs
-  location: http://darcs.nomeata.de/darcswatch/
+  location: http://darcs.nomeata.de/concurrentoutput/
   tag:      v0.1

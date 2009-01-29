@@ -1,5 +1,5 @@
 Name:            concurrentoutput
-version:         0.1
+version:         0.2
 Category:        User Interfaces
 author:          Joachim Breitner
 maintainer:      Joachim Breitner <mail@joachim-breitner.de>
@@ -7,7 +7,7 @@ Synopsis:        Ungarble output from several threads
 Description:     This library provides a simple interface to output status
                  messages from more than one thread.
 		 .
-		 It will continue adding information (such as dots, or "done")
+		 It will continue adding information (such as dots, or \"done\")
 		 to the correct line and continue scrolling when a line is done.
 		 .
 		 For example, this screen:
@@ -31,7 +31,7 @@ Description:     This library provides a simple interface to output status
 		 @_@
 		 .
 		 If standard output is not a terminal, it will only print
-		 complete lines.
+		 complete lines and not output any control characters.
 		 .
 		 At the moment, it can only handle lines that are shorter than
 		 the terminal. If they are not, output will be garbled again.
@@ -55,4 +55,4 @@ source-repository head
 source-repository this
   type:     darcs
   location: http://darcs.nomeata.de/concurrentoutput/
-  tag:      v0.1
+  tag:      v0.2

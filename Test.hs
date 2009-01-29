@@ -1,17 +1,18 @@
 import System.Terminal.Concurrent
 import Control.Concurrent
 
-testThread co n1 n2 = do
+testThread writeC n1 n2 = do
 	t <- myThreadId
 	threadDelay $ n1 * 100000
-	writeConcurrent co ("Thread " ++ show t ++ ": ")
+	writeC("Thread " ++ show t ++ ": ")
 	threadDelay $ n1 * 100000
-	writeConcurrent co "still working... "
+	writeC "still working... "
+	writeC ""
 	threadDelay $ n2 * 100000
-	writeConcurrentDone co "done"
+	writeC "done\n"
 
 main = do
-	co <- startConcurrentOutput
-	mapM forkIO  $ zipWith (testThread co) [0,0,3,4,3] [4,8,5,5,2]
+	writeC <- getConcurrentOutputter
+	mapM forkIO  $ zipWith (testThread writeC) [0,0,3,5,2,3] [4,8,5,4,1,2]
 	threadDelay $ 15*100000
 	

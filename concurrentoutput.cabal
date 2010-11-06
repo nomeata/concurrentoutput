@@ -1,5 +1,5 @@
 Name:            concurrentoutput
-version:         0.2
+version:         0.2.0.1
 Category:        User Interfaces
 author:          Joachim Breitner
 maintainer:      Joachim Breitner <mail@joachim-breitner.de>
@@ -53,4 +53,4 @@ source-repository head
 source-repository this
   type:     darcs
   location: http://darcs.nomeata.de/concurrentoutput/
-  tag:      v0.2
+  tag:      v0.2.0.1

@@ -12,23 +12,21 @@ Description:     This library provides a simple interface to output status
 		 .
 		 For example, this screen:
 		 .
-		 @Thread ThreadId 27: still working... done@
+		 @
+		 Thread ThreadId 27: still working... done
+                 Thread ThreadId 25: still working... 
+                 Thread ThreadId 26: still working... 
+		 _
+		 @
 		 .
-                 @Thread ThreadId 25: still working... @
+		 will, once thread 25 has finished, look like this:
 		 .
-                 @Thread ThreadId 26: still working... @
-	         .
-		 @_@
-		 .
-		 will, once thread 25 has finished, look like this
-		 .	
-                 @Thread ThreadId 25: still working... done@
-		 .
-		 @Thread ThreadId 27: still working... done@
-		 .
-                 @Thread ThreadId 26: still working... @
-	         .
-		 @_@
+		 @
+                 Thread ThreadId 25: still working... done
+		 Thread ThreadId 27: still working... done
+                 Thread ThreadId 26: still working... 
+		 _
+		 @
 		 .
 		 If standard output is not a terminal, it will only print
 		 complete lines and not output any control characters.

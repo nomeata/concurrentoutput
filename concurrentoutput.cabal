@@ -44,7 +44,7 @@ Build-Type:      Simple
 Library
         hs-source-dirs: src
         Exposed-Modules: System.Terminal.Concurrent
-        Build-Depends:  base > 3 && < 4
+        Build-Depends:  base > 3 && < 5
 
 source-repository head
   type:     darcs
